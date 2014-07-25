@@ -1,9 +1,10 @@
 library(shiny)
-
+#Function to perform calculation
 calculator <- function(sel, a, b) {
   if(sel == "1") a+b else if (sel == "2") a-b else if (sel == "3") a*b else a/b
 }
 
+#Server function to read values and perform calculation
 shinyServer(
   function(input, output) {
     output$a_value <- renderPrint({input$A})

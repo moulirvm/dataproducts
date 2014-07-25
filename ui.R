@@ -1,9 +1,11 @@
 library(shiny)
 
+#UI for the application
 shinyUI(pageWithSidebar(
   headerPanel(
     "Basic calculator"
   ),
+  #Take input from the user
   sidebarPanel(
     h3('Enter values '),
     numericInput('A', 'Value of A', 1),
@@ -14,7 +16,7 @@ shinyUI(pageWithSidebar(
                    "Multiplication" = "3",
                    "Division" = "4"))
   ),
-  
+  #Display documentation and output
   mainPanel(
     h4("Documentation : This application is to perform basic arithmetic 
        of addition, subtraction, multiplication and division
